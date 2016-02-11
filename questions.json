@@ -10,26 +10,6 @@
         ]
     },
     {
-        "question": "What's the difference between standards and quirks mode?",
-        "category":"HTML",
-        "answers": [
-          {"answer": "When W3C standards came out browsers couldn't start using them right away so there was two modes standards and quirks mode", "value": true},
-          {"answer": "Quirks mode refers to WebKit browsers and standards mode refers to IE", "value": false}, 
-          {"answer": "Quirks mode is used for testing and standards mode is used in production websites", "value": false}, 
-          {"answer": "Quirks mode refers to the developer tools and standards mode refers to the browser window", "value": false}
-        ]
-    },
-    {
-        "question": "What maybe a problem with serving pages as application/xhtml+xml?",
-        "category":"HTML",
-        "answers": [
-          {"answer": "Browsers that don't accept it render plain text/html", "value": true},
-          {"answer": "There are performance issues", "value": false}, 
-          {"answer": "The browser only displays the CSS and not the HTML", "value": false}, 
-          {"answer": "Fonts render at 62.5%", "value": false}
-        ]
-    },
-    {
         "question": "How do you declare the language in HTML?",
         "category":"HTML",
         "answers": [
@@ -130,16 +110,6 @@
         ]
     },
     {
-        "question": "What are CSS sprites?",
-        "category":"CSS",
-        "answers": [
-          {"answer": "A collection of images put into a single image", "value": true},
-          {"answer": "CSS animations", "value": false}, 
-          {"answer": "Small images", "value": false}, 
-          {"answer": "Minified images", "value": false}
-        ]
-    },
-    {
         "question": "What are Sass, Stylus and LESS?",
         "category":"CSS",
         "answers": [
@@ -180,16 +150,6 @@
         ]
     },
     {
-        "question": "What is Flexbox?",
-        "category":"CSS",
-        "answers": [
-          {"answer": "Is a layout mode providing for the arrangement of elements", "value": true},
-          {"answer": "How the browser interprets CSS", "value": false}, 
-          {"answer": "A CSS animation framework", "value": false}, 
-          {"answer": "A way to change the width of the browser window", "value": false}
-        ]
-    },
-    {
         "question": "Why is it better to use translate() rather than an position:absolute Top/Right/Bottom/Left?",
         "category":"CSS",
         "answers": [
@@ -200,12 +160,42 @@
         ]
     },
     {
+        "question": "What is the default box-sizing propery?",
+        "category":"CSS",
+        "answers": [
+          {"answer": "content-box", "value": true},
+          {"answer": "border-box", "value": false}, 
+          {"answer": "initial", "value": false}, 
+          {"answer": "inherit", "value": false}
+        ]
+    },
+    {
+        "question": "What is the Breakfast of Champions?",
+        "category":"Food",
+        "answers": [
+          {"answer": "Dosa", "value": true},
+          {"answer": "Idli", "value": false}, 
+          {"answer": "Pancakes", "value": false}, 
+          {"answer": "Waffles", "value": false}
+        ]
+    },
+    {
+        "question": "How do you select all the &lt;p&gt; elements that come after a &lt;div&gt; element?",
+        "category":"CSS",
+        "answers": [
+          {"answer": "div + p", "value": true},
+          {"answer": "div &gt; p", "value": false}, 
+          {"answer": "div * p", "value": false}, 
+          {"answer": "div p", "value": false}
+        ]
+    },
+    {
         "question": "How do you create a DOM node with JavaScript?",
         "category":"JavaScript",
         "answers": [
           {"answer": "document.createElement();", "value": true},
           {"answer": "window.createElement();", "value": false}, 
-          {"answer": "createAElement();", "value": false}, 
+          {"answer": "window.createNewElement();", "value": false}, 
           {"answer": "document.createNewElement();", "value": false}
         ]
     },
@@ -310,16 +300,6 @@
         ]
     },
     {
-        "question": "What is a problem with a single page app?",
-        "category":"JavaScript",
-        "answers": [
-          {"answer": "Can cause SEO issues", "value": true},
-          {"answer": "May not have enough pages", "value": false}, 
-          {"answer": "Can have HTML issues", "value": false}, 
-          {"answer": "May cause W3C validation errors", "value": false}
-        ]
-    },
-    {
         "question": "How do JavaScript closures work?",
         "category":"JavaScript",
         "answers": [
@@ -347,6 +327,76 @@
           {"answer": "Models virtually computed", "value": false}, 
           {"answer": "Mixins variable commands", "value": false}, 
           {"answer": "Messaging virtual computer", "value": false}
+        ]
+    },
+    {
+        "question": "What's the first thing you should do when you start a node project?",
+        "category":"Node",
+        "answers": [
+          {"answer": "npm init", "value": true},
+          {"answer": "npm install", "value": false}, 
+          {"answer": "npm start", "value": false}, 
+          {"answer": "npm initialize", "value": false}
+        ]
+    },
+    {
+        "question": "What is the manifest file for a node project?",
+        "category":"Node",
+        "answers": [
+          {"answer": "package.json", "value": true},
+          {"answer": ".npmrc", "value": false}, 
+          {"answer": ".node", "value": false}, 
+          {"answer": "readme.md", "value": false}
+        ]
+    },
+    {
+        "question": "How do you expose variables in node that can be required into other files?",
+        "category":"Node",
+        "answers": [
+          {"answer": "module.exports", "value": true},
+          {"answer": "mod.exports", "value": false}, 
+          {"answer": "module.export", "value": false}, 
+          {"answer": "modules.export", "value": false}
+        ]
+    },
+    {
+        "question": "What will be logged in the console for the following code: console.log(a); var a = 'blue'; a = 'green'; ?",
+        "category":"JavaScript",
+        "answers": [
+          {"answer": "undefined", "value": true},
+          {"answer": "You will get an error.", "value": false}, 
+          {"answer": "blue", "value": false}, 
+          {"answer": "green", "value": false}
+        ]
+    },
+    {
+        "question": "How do you create ONE event handler for a click on any &lt;p&gt; element inside a &lt;div&gt; element using jQuery?",
+        "category":"jQuery",
+        "answers": [
+          {"answer": "$('div').on('click', 'p', function() { console.log('someone clicked me!'); });", "value": true},
+          {"answer": "$('div p').on('click', function() { console.log('someone clicked me!'); });", "value": false}, 
+          {"answer": "$('div').find('p').on('click', function() { console.log('someone clicked me!'); });", "value": false}, 
+          {"answer": "$('div').filter('p').on('click', function() { console.log('someone clicked me!'); });", "value": false}
+        ]
+    },
+    {
+        "question": "How do you select all the &lt;div&gt; elements and all the &lt;p&gt; elements in the DOM using jQuery?",
+        "category":"jQuery",
+        "answers": [
+          {"answer": "$('div, p')", "value": true},
+          {"answer": "$.find('div + p')", "value": false}, 
+          {"answer": "$('div + p')", "value": false}, 
+          {"answer": "$('div').find('p')", "value": false}
+        ]
+    },
+    {
+        "question": "How do you write an if statement in Handlebars?",
+        "category":"JavaScript",
+        "answers": [
+          {"answer": "{{#if someVar}}&lt;div&gt;{{someVar}}&lt;/div&gt;{{/if}}", "value": true},
+          {"answer": "if (someVar) { &lt;div&gt;{{someVar}}&lt;/div&gt; }", "value": false}, 
+          {"answer": "{$if someVar}&lt;div&gt;{{someVar}}&lt;/div&gt;{/if}", "value": false}, 
+          {"answer": "if (someVar) {{{&lt;div&gt;{{someVar}}&lt;/div&gt;}}}", "value": false}
         ]
     }
 ]
