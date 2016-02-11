@@ -46,7 +46,8 @@ var get           = require('./modules/get'),
   currentCat,
   currentQuestion,
   time,
-  data;
+  data,
+  freeze = false;
 
 // set the number of questions being asked
 totalNum.innerHTML = quizTotal;
@@ -98,9 +99,12 @@ document.querySelector('body').addEventListener('click', function(event) {
     clearInterval(time);
 
     // load another question
-    setTimeout(function(){
-      loadQuestion();
-    }, 1500);
+    if (freeze === false) {
+      setTimeout(function(){
+        loadQuestion();
+      }, 1500);
+      freeze = true;
+    }
   }
 });
 
@@ -128,6 +132,7 @@ function loadQuestion(){
   var answerList = '',
     numberQuestions = data.length;
 
+  freeze = false;
   // clear previous question/answer
   question.innerHTML = '';
   answers.innerHTML = '';
